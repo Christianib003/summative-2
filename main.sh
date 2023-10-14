@@ -37,3 +37,34 @@ update_student() {
 
     echo "Student with ID $update_id updated."
 }
+# Main menu loop
+while true; do
+    echo "Main Menu:"
+    echo "1. Create Student"
+    echo "2. View Students"
+    echo "3. Delete Student"
+    echo "4. Update Student"
+    echo "5. Exit"
+    read -p "Enter your choice: " choice
+
+    case $choice in
+        1)
+            create_student
+            ;;
+        2)
+            view_students
+            ;;
+        3)
+            delete_student
+            ;;
+        4)
+            update_student
+            ;;
+        5)
+            exit 0
+            ;;
+        *)
+            echo "Invalid input. Choose between 1 - 5."
+            ;;
+    esac
+done 
