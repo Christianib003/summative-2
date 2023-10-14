@@ -15,3 +15,11 @@ view_students() {
     echo "List of students:"
     cat students-list_0923.txt
 }
+# Deleting a student record by ID
+delete_student() {
+    read -p "Enter student ID to delete: " delete_id
+
+    grep -v "$delete_id" students-list_0923.txt > temp.txt
+    mv temp.txt students-list_0923.txt
+    echo "Student with ID $delete_id deleted."
+}
