@@ -10,3 +10,8 @@ create_student() {
     echo "$email $age $student_id" >> students-list_0923.txt
     echo "Student record created and saved."
 }
+# Viewing all student records
+view_students() {
+    echo "List of students:"
+    cat students-list_0923.txt
+}
